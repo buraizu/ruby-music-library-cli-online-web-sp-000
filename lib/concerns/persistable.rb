@@ -1,15 +1,11 @@
 module Persistable
 
-  def save
-    self.all << self
+  def self.destroy_all #Class Method
+    @@all = []
   end
 
-  def self.destroy_all
-    self.all.clear
-  end
-
-  def count
-    self.all.size
+  def save #Instance Method
+    @@all << self
   end
 
 end

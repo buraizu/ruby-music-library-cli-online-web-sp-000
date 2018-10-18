@@ -39,6 +39,14 @@ class Artist
     @songs.collect {|song| song.genre}.uniq
   end
 
+  def self.destroy_all
+    @@all = []
+  end
+
+  def save
+    @@all << self
+  end
+
   def self.create(name)
     artist = Artist.new(name)
     @@all << artist

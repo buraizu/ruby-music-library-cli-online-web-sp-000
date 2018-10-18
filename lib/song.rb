@@ -1,8 +1,7 @@
 require 'pry'
 
 class Song
-  extend Persistable
-  include Persistable
+
 
   attr_accessor :name, :artist, :genre
   @@all = []
@@ -25,6 +24,14 @@ class Song
 
   def self.all_sorted
     all.sort_by!{|song| song.name}
+  end
+
+  def self.destroy_all
+    @@all = []
+  end
+
+  def save
+    @@all << self
   end
 
   def artist=(artist)
