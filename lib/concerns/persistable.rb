@@ -6,8 +6,10 @@ module Persistable
     end
   end
 
-  def save #Instance Method
-    @@all << self
+  module InstanceMethods
+    def save #Instance Method
+      @@all << self
+    end
   end
 
 end
