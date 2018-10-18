@@ -1,7 +1,9 @@
 module Persistable
 
-  def self.destroy_all #Class Method
-    @@all = []
+  module ClassMethods
+    def self.destroy_all #Class Method
+      @@all = []
+    end
   end
 
   def save #Instance Method

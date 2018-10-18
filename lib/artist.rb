@@ -2,8 +2,7 @@
 
 class Artist
   extend Concerns::Findable
-  extend Persistable
-  include Persistable
+  
 
   attr_accessor :name, :artist, :songs
   @@all = []

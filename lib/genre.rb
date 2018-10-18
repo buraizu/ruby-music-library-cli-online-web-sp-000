@@ -1,8 +1,7 @@
 class Genre
   extend Concerns::Findable
-  extend Persistable
-  include Persistable
-  
+
+
   attr_accessor :name
   @@all = []
 
